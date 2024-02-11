@@ -26,8 +26,9 @@ def order_by_helpful(data, helpful_id):
 
     list_of_keys = data.keys()
 
+    new_dict = {}
+
     for key in list_of_keys:
-        new_dict = {}
 
         for review in data[key]:
             
@@ -38,7 +39,7 @@ def order_by_helpful(data, helpful_id):
             else:
                 new_dict[helpful_key] = [review]
 
-    print(new_dict)
+    return new_dict
             
 
 array_dicts=load_json_from('bd.json')
