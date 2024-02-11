@@ -1,4 +1,4 @@
-efrom wtforms.validators import InputRequired, NoneOf, Regexp, ValidationError
+from wtforms.validators import InputRequired, NoneOf, Regexp, ValidationError
 
 import app
 from flask import Flask, render_template, session,redirect, url_for, flash
