@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1>Hola, {{ user.username }}</h1>
+
+{% if text == 'A'%}
+        This is an A :{{ text }}
+{% elif text == 'B'%}
+        This is an B :{{ text }}
+{% else %}
+    No hay testo
+{% endif %}
+<br>
+{% for i in range(11) %}
+    {{ i }}
+{% endfor %}
+<ul>
+    {% for key, valor in subject.items() %}
+        <li>Key: {{ key }}, Value: {{ valor }}</li>
+    {% endfor %}
+</ul>
+{% for profesor in profesores %}
+    {% for clau, valor in profesor.items() %}
+        {{ clau }} {{ valor }}
+    {% endfor %}
+{% endfor %}
+
+{% if juego in game %}
+
+
+</body>
+</html>

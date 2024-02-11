@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>First Form</h1>
+
+<p>
+<!--Esto define que raza ha introducido (si hay algo lo nombra, si no pide raza)-->
+    {% if breed %}
+        The breed you entered is {{ breed }}.
+        Update it in the form bellow
+    {% else %}
+        Please enter your pet's breed
+    {% endif %}
+
+</p>
+<!-- -->
+<form method="POST">
+    <!--siempre primero evitar ataques-->
+    {{ form.hidden_tag() }} <!-- Campo oculto para evitar ataques CSRF-->
+    <!--Campos del formulario-->
+    {{ form.breed.label }}{{ form.breed() }}<!-- ponemos etiqueta y despues ejecutamos breed(), que añade un input text por nosotros-->
+    <!--boton de enviar-->
+    {{ form.submit() }}
+
+</form>
+
+</body>
+</html>

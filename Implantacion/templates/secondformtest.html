@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulari</title>
+</head>
+<body>
+    <form method="post">
+        {{ form.hidden_tag() }}
+        {{ form.breed.label }} {{ form.breed() }}
+        <br/>
+        {{ form.neutered.label }} {{ form.neutered() }}
+        <br/>
+        {{ form.mood.label }} {{ form.mood() }}
+        <br/>
+        {{ form.favourite_food.label }} {{ form.favourite_food() }}
+        <br/>
+        {{ form.comments.label }} {{ form.comments() }}
+        {{ form.submit() }}
+    </form>
+</body>
+</html>
