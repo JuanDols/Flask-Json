@@ -1,5 +1,11 @@
 import json
 
+''' file: bd.json cada línea siendo un objecto
+{"id":"hola",...}
+{"id":"adios",...}
+{"id":"holaadios",...}
+'''
+
 file = open("bd.json", "r")
 contents = file.readlines()
 file.close()
